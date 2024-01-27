@@ -3,6 +3,12 @@
     public class Worker
     {
         public List<int> rate = new List<int>();
+
+        public Worker(string name)
+        {
+            Name = name;
+        }
+
         public Worker(string name, string surname, int age)
         {
             this.Name = name;

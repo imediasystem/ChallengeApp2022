@@ -37,7 +37,8 @@ foreach (var worker in workers)
         maxResult = worker.Result;
     }
 }
-
+Console.ForegroundColor = ConsoleColor.Blue;
 Console.WriteLine("Pracownikiem z najlepszym wynikiem zostaje" + " " + workerWithMaxResult.Name + " "
     + workerWithMaxResult.Surname + " " + "lat" + " " + workerWithMaxResult.Age + ", "
     + "który zdobył" + " " + workerWithMaxResult.Result + " " + "pkt");
+Console.ResetColor();
