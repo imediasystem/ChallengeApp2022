@@ -1,44 +1,37 @@
-﻿// Zadanie domowe Day 6
+﻿using ChallengeApp2022;
 
-using ChallengeApp2022;
+var employee1 = new Employee("Adam", "Nowak", 32);
+employee1.AddGrade(5);
+employee1.AddGrade(4);
+employee1.AddGrade(7);
+var statistics1 = employee1.GetStatistics();
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine($"Pracownik {employee1.Name} {employee1.Surname} lat {employee1.Age} osiągnął następujące wyniki:");
+Console.WriteLine($"Average: {statistics1.Average:F2}");
+Console.WriteLine($"Min: {statistics1.Min}");
+Console.WriteLine($"Max: {statistics1.Max}");
+Console.ResetColor();
 
-Worker worker1 = new Worker("Adam", "Nowak", 32);
-Worker worker2 = new Worker("Karol", "Theus", 34);
-Worker worker3 = new Worker("Jakub", "Kowalski", 27);
-
-
-worker1.AddRate(5);
-worker1.AddRate(4);
-worker1.AddRate(7);
-
-worker2.AddRate(6);
-worker2.AddRate(7);
-worker2.AddRate(8);
-
-worker3.AddRate(9);
-worker3.AddRate(6);
-worker3.AddRate(7);
-
-
-List<Worker> workers = new List<Worker>()
-{
-    worker1, worker2, worker3
-};
-
-int maxResult = -1;
-Worker workerWithMaxResult = null;
-
-foreach (var worker in workers)
-{
-    if (worker.Result > maxResult)
-
-    {
-        workerWithMaxResult = worker;
-        maxResult = worker.Result;
-    }
-}
+var employee2 = new Employee("Karol", "Theus", 34);
+employee2.AddGrade(6);
+employee2.AddGrade(7);
+employee2.AddGrade(8);
+var statistics2 = employee2.GetStatistics();
 Console.ForegroundColor = ConsoleColor.Blue;
-Console.WriteLine("Pracownikiem z najlepszym wynikiem zostaje" + " " + workerWithMaxResult.Name + " "
-    + workerWithMaxResult.Surname + " " + "lat" + " " + workerWithMaxResult.Age + ", "
-    + "który zdobył" + " " + workerWithMaxResult.Result + " " + "pkt");
+Console.WriteLine($"\nPracownik {employee2.Name} {employee2.Surname} lat {employee2.Age} osiągnął następujące wyniki:");
+Console.WriteLine($"Average: {statistics2.Average:F2}");
+Console.WriteLine($"Min: {statistics2.Min}");
+Console.WriteLine($"Max: {statistics2.Max}");
+Console.ResetColor();
+
+var employee3 = new Employee("Jakub", "Kowalski", 27);
+employee3.AddGrade(9);
+employee3.AddGrade(6);
+employee3.AddGrade(7);
+var statistics3 = employee3.GetStatistics();
+Console.ForegroundColor = ConsoleColor.Red;
+Console.WriteLine($"\nPracownik {employee3.Name} {employee3.Surname} lat {employee3.Age} osiągnął następujące wyniki:");
+Console.WriteLine($"Average: {statistics3.Average:F2}");
+Console.WriteLine($"Min: {statistics3.Min}");
+Console.WriteLine($"Max: {statistics3.Max}");
 Console.ResetColor();
