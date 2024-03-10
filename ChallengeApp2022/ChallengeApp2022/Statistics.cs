@@ -7,5 +7,7 @@
         public float Max { get; set; }
 
         public float Average { get; set; }
+
+        public float NumberOfRatings { get; set; }
     }
 }

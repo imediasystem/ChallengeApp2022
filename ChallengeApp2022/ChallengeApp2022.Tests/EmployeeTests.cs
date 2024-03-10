@@ -18,7 +18,7 @@
         [Test]
         public void WhenEmployeeCollectAllGrades_ShouldReturnMinGrade()
         {
-            var employee2 = new Employee("Karol", "Theus", 34);
+            var employee2 = new Employee("Karol", "Mazur", 34);
             employee2.AddGrade(6);
             employee2.AddGrade(7);
             employee2.AddGrade(8);
