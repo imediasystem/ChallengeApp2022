@@ -1,7 +1,7 @@
 ﻿using ChallengeApp2022;
 
 var employee1 = new Employee("Adam", "Nowak", 32);
-employee1.AddGrade(4);
+employee1.AddGrade(6);
 employee1.AddGrade(4);
 employee1.AddGrade(7);
 var statistics1 = employee1.GetStatistics();

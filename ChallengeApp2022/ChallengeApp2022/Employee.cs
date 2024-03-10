@@ -43,6 +43,20 @@
                 }
 
         }
+        public void AddGrade(char grade)
+        {
+            if (float.TryParse($"{grade}", out float result))
+            {
+                this.AddGrade(result);
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("\nUWAGA!!! Char is not float!!!");
+                Console.ResetColor();
+            }
+
+        }
         public void AddGrade(short grade)
         {
             float gradeAsFloat = grade;
