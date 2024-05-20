@@ -17,13 +17,12 @@ while (true)
     employee1.AddGrade(grade);
 }
 
-var statistics1 = employee1.GetStatisticsWithForeach();
-var statistics2 = employee1.GetStatisticsWithForeach();
+var statistics = employee1.GetStatisticsWithForeach();
 Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine($"\nPracownik {employee1.Name} {employee1.Surname} lat {employee1.Age} osiągnął następujące wyniki:");
-Console.WriteLine($"Average Letter: {statistics2.AverageLetter}");
-Console.WriteLine($"Average: {statistics1.Average:F2}");
-Console.WriteLine($"Ocena Min: {statistics1.Min}");
-Console.WriteLine($"Ocena Max: {statistics1.Max}");
-Console.WriteLine($"Ilość ocen branych pod uwagę: {statistics1.NumberOfRatings}");
+Console.WriteLine($"Average Letter: {statistics.AverageLetter}");
+Console.WriteLine($"Average: {statistics.Average:F2}");
+Console.WriteLine($"Ocena Min: {statistics.Min}");
+Console.WriteLine($"Ocena Max: {statistics.Max}");
+Console.WriteLine($"Ilość ocen branych pod uwagę: {statistics.NumberOfRatings}");
 Console.ResetColor();
