@@ -31,9 +31,7 @@ namespace ChallengeApp2022
             }
             else
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("\nCAUTION!!! Invalid grade value!!!");
-                Console.ResetColor();
+                throw new Exception("\nCAUTION!!! Invalid grade value!!!\n");
             }
         }
         public void AddGrade(string grade)
@@ -45,9 +43,7 @@ namespace ChallengeApp2022
                         
             else
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("\nCAUTION!!! String is not float!!!");
-                Console.ResetColor();
+                throw new Exception("\nCAUTION!!! String is not float!!!\n");
             }
         }
 
@@ -76,11 +72,7 @@ namespace ChallengeApp2022
                     this.grades.Add(20);
                     break;
                 default:
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("\nCAUTION!!! Invalid grade letter!!!");
-                    Console.ResetColor();
-                    this.grades.Add(0);
-                    break;
+                    throw new Exception("\nCAUTION!!! Invalid grade letter!!!\n");
             }
         }
                 
