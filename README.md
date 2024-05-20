@@ -1,1 +1,1 @@
-Aplikacja konsolowa do oceny pracowników w firmie
+Aplikacja konsolowa SkillCase do oceny pracowników w firmie
