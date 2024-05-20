@@ -5,40 +5,53 @@
         [Test]
         public void WhenEmployeeCollectAllGrades_ShouldReturnMaxGrade()
         {
-            var employee1 = new Employee("Adam", "Nowak", 32);
-            employee1.AddGrade(5);
-            employee1.AddGrade(4);
-            employee1.AddGrade(7);
+            var employee1 = new Employee("Zenon", "Kalicki", 32);
+            employee1.AddGrade(50);
+            employee1.AddGrade(40);
+            employee1.AddGrade(70);
 
-            var statistics1 = employee1.GetStatistics();
+            var statistics1 = employee1.GetStatisticsWithForeach();
 
-            Assert.AreEqual(7, statistics1.Max);
+            Assert.AreEqual(70, statistics1.Max);
         }
 
         [Test]
         public void WhenEmployeeCollectAllGrades_ShouldReturnMinGrade()
         {
             var employee2 = new Employee("Karol", "Mazur", 34);
-            employee2.AddGrade(6);
-            employee2.AddGrade(7);
-            employee2.AddGrade(8);
+            employee2.AddGrade(60);
+            employee2.AddGrade(70);
+            employee2.AddGrade(80);
 
-            var statistics2 = employee2.GetStatistics();
+            var statistics2 = employee2.GetStatisticsWithForeach();
 
-            Assert.AreEqual(6, statistics2.Min);
+            Assert.AreEqual(60, statistics2.Min);
         }
 
         [Test]
         public void WhenEmployeeCollectAllGrades_ShouldReturnAverage()
         {
             var employee3 = new Employee("Jakub", "Kowalski", 27);
-            employee3.AddGrade(9);
-            employee3.AddGrade(6);
-            employee3.AddGrade(7);
+            employee3.AddGrade(90);
+            employee3.AddGrade(60);
+            employee3.AddGrade(70);
 
-            var statistics3 = employee3.GetStatistics();
+            var statistics3 = employee3.GetStatisticsWithForeach();
 
-            Assert.AreEqual(7.33333349f, statistics3.Average);
+            Assert.AreEqual(73.33333333f, statistics3.Average);
+        }
+
+        [Test]
+        public void WhenEmployeeCollectGrades_ShouldReturnAverageLetterValue()
+        {
+            var employee1 = new Employee("Zenon", "Kalicki", 32);
+            employee1.AddGrade(50);
+            employee1.AddGrade(40);
+            employee1.AddGrade(70);
+
+            var statistics4 = employee1.GetStatisticsWithForeach();
+
+            Assert.AreEqual('C', statistics4.AverageLetter);
         }
     }
 }

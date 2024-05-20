@@ -1,53 +1,29 @@
 ﻿using ChallengeApp2022;
 
-var employee1 = new Employee("Adam", "Nowak", 32);
-employee1.AddGrade("6");
-employee1.AddGrade('4');
-employee1.AddGrade(7);
+Console.WriteLine("Witamy w aplikacji SkillCase - System Okresowej Oceny Pracownika");
+Console.WriteLine("================================================================");
+Console.WriteLine();
+
+var employee1 = new Employee("Zenon", "Kalicki", 32);
+
+while (true)
+{
+    Console.WriteLine("Podaj kolejną ocenę pracownika: ");
+    var grade = Console.ReadLine();
+    if (grade == "q")
+        {
+        break;
+        }
+    employee1.AddGrade(grade);
+}
+
 var statistics1 = employee1.GetStatisticsWithForeach();
+var statistics2 = employee1.GetStatisticsWithForeach();
 Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine($"\nPracownik {employee1.Name} {employee1.Surname} lat {employee1.Age} osiągnął następujące wyniki:");
+Console.WriteLine($"Average Letter: {statistics2.AverageLetter}");
 Console.WriteLine($"Average: {statistics1.Average:F2}");
-Console.WriteLine($"Min: {statistics1.Min}");
-Console.WriteLine($"Max: {statistics1.Max}");
+Console.WriteLine($"Ocena Min: {statistics1.Min}");
+Console.WriteLine($"Ocena Max: {statistics1.Max}");
 Console.WriteLine($"Ilość ocen branych pod uwagę: {statistics1.NumberOfRatings}");
-Console.ResetColor();
-
-var employee2 = new Employee("Karol", "Mazur", 34);
-employee2.AddGrade("6");
-employee2.AddGrade('7');
-employee2.AddGrade(8);
-var statistics2 = employee2.GetStatisticsWithWhile();
-Console.ForegroundColor = ConsoleColor.DarkGray;
-Console.WriteLine($"\nPracownik {employee2.Name} {employee2.Surname} lat {employee2.Age} osiągnął następujące wyniki:");
-Console.WriteLine($"Average: {statistics2.Average:F2}");
-Console.WriteLine($"Min: {statistics2.Min}");
-Console.WriteLine($"Max: {statistics2.Max}");
-Console.WriteLine($"Ilość ocen branych pod uwagę: {statistics2.NumberOfRatings}");
-Console.ResetColor();
-
-var employee3 = new Employee("Jakub", "Kowalski", 27);
-employee3.AddGrade("9");
-employee3.AddGrade('6');
-employee3.AddGrade(7);
-var statistics3 = employee3.GetStatisticsWithDoWhile();
-Console.ForegroundColor = ConsoleColor.Blue;
-Console.WriteLine($"\nPracownik {employee3.Name} {employee3.Surname} lat {employee3.Age} osiągnął następujące wyniki:");
-Console.WriteLine($"Average: {statistics3.Average:F2}");
-Console.WriteLine($"Min: {statistics3.Min}");
-Console.WriteLine($"Max: {statistics3.Max}");
-Console.WriteLine($"Ilość ocen branych pod uwagę: {statistics3.NumberOfRatings}");
-Console.ResetColor();
-
-var employee4 = new Employee("Zenon", "Kalicki", 31);
-employee4.AddGrade("8");
-employee4.AddGrade('5');
-employee4.AddGrade(7);
-var statistics4 = employee4.GetStatisticsWithFor();
-Console.ForegroundColor = ConsoleColor.DarkYellow;
-Console.WriteLine($"\nPracownik {employee4.Name} {employee4.Surname} lat {employee4.Age} osiągnął następujące wyniki:");
-Console.WriteLine($"Average: {statistics4.Average:F2}");
-Console.WriteLine($"Min: {statistics4.Min}");
-Console.WriteLine($"Max: {statistics4.Max}");
-Console.WriteLine($"Ilość ocen branych pod uwagę: {statistics4.NumberOfRatings}");
 Console.ResetColor();
