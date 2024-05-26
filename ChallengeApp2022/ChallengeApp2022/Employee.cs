@@ -4,28 +4,25 @@ using System.Diagnostics;
 namespace ChallengeApp2022
 {
     // Klasa
-    public class Employee
+    public class Employee : Person
     {
         //Lista
         private List<float> grades = new List<float>();
 
         //Konstruktor
-        public Employee(string name, string surname, int age)
+        public Employee(string name, string surname, char gender, int age)
+            : base(name, surname, gender)
         {
-            this.Name = name;
-            this.Surname = surname;
-            this.Age = age;
+             this.Age = age;
         }
 
         //Właściwości
-        public string Name { get; private set; }
-        public string Surname { get; private set; }
         public int Age { get; private set; }
 
         //Metody
         public void AddGrade(float grade)
         {
-            if(grade >= 0 && grade <=100)
+            if (grade >= 0 && grade <= 100)
             {
                 this.grades.Add(grade);
             }
@@ -40,7 +37,7 @@ namespace ChallengeApp2022
             {
                 this.AddGrade(result);
             }
-                        
+
             else
             {
                 throw new Exception("\nCAUTION!!! String is not float!!!\n");
@@ -49,7 +46,7 @@ namespace ChallengeApp2022
 
         public void AddGrade(char grade)
         {
-            switch(grade)
+            switch (grade)
             {
                 case 'A':
                 case 'a':
@@ -75,7 +72,7 @@ namespace ChallengeApp2022
                     throw new Exception("\nCAUTION!!! Invalid grade letter!!!\n");
             }
         }
-                
+
         public void AddGrade(short grade)
         {
             float gradeAsFloat = (float)grade;
@@ -104,7 +101,7 @@ namespace ChallengeApp2022
             statistics.Max = float.MinValue;
             statistics.Min = float.MaxValue;
             statistics.NumberOfRatings = 0;
-                
+
             foreach (var grade in this.grades)
             {
                 statistics.Max = Math.Max(statistics.Max, grade);
@@ -114,7 +111,7 @@ namespace ChallengeApp2022
             }
             statistics.Average /= this.grades.Count;
 
-            switch(statistics.Average)
+            switch (statistics.Average)
             {
                 case var average when average >= 80:
                     statistics.AverageLetter = 'A';
@@ -134,6 +131,7 @@ namespace ChallengeApp2022
             }
             return statistics;
         }
-                
+
     }
 }
+

@@ -6,7 +6,7 @@ Console.WriteLine("=============================================================
 Console.ResetColor();
 Console.WriteLine();
 
-var employee1 = new Employee("Zenon", "Kalicki", 32);
+var employee1 = new Employee("Zenon", "Kalicki", 'M', 32);
 
 while (true)
 {
