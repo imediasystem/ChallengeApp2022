@@ -4,19 +4,27 @@ using System.Diagnostics;
 namespace ChallengeApp2022
 {
     // Klasa
-    public class Employee : Person
+    public class Employee : IEmployee
     {
         //Lista
         private List<float> grades = new List<float>();
 
         //Konstruktor
         public Employee(string name, string surname, char gender, int age)
-            : base(name, surname, gender)
+            
         {
-             this.Age = age;
+            this.Name = name;
+            this.Surname = surname;
+            this.Gender = gender;
+            this.Age = age;
         }
 
         //Właściwości
+        public string Name { get; private set; }
+
+        public string Surname { get; private set; }
+
+        public char Gender { get; private set; }
         public int Age { get; private set; }
 
         //Metody
@@ -134,4 +142,3 @@ namespace ChallengeApp2022
 
     }
 }
-

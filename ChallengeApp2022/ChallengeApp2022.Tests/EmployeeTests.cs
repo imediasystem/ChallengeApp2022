@@ -5,7 +5,7 @@
         [Test]
         public void WhenEmployeeCollectAllGrades_ShouldReturnMaxGrade()
         {
-            var employee1 = new Employee("Zenon", "Kalicki", 32);
+            var employee1 = new Employee("Zenon", "Kalicki", 'M', 32);
             employee1.AddGrade(50);
             employee1.AddGrade(40);
             employee1.AddGrade(70);
@@ -18,7 +18,7 @@
         [Test]
         public void WhenEmployeeCollectAllGrades_ShouldReturnMinGrade()
         {
-            var employee2 = new Employee("Karol", "Mazur", 34);
+            var employee2 = new Employee("Karol", "Mazur", 'M', 34);
             employee2.AddGrade(60);
             employee2.AddGrade(70);
             employee2.AddGrade(80);
@@ -31,7 +31,7 @@
         [Test]
         public void WhenEmployeeCollectAllGrades_ShouldReturnAverage()
         {
-            var employee3 = new Employee("Jakub", "Kowalski", 27);
+            var employee3 = new Employee("Jakub", "Kowalski", 'M', 27);
             employee3.AddGrade(90);
             employee3.AddGrade(60);
             employee3.AddGrade(70);
@@ -44,7 +44,7 @@
         [Test]
         public void WhenEmployeeCollectGrades_ShouldReturnAverageLetterValue()
         {
-            var employee1 = new Employee("Zenon", "Kalicki", 32);
+            var employee1 = new Employee("Zenon", "Kalicki", 'M', 32);
             employee1.AddGrade(50);
             employee1.AddGrade(40);
             employee1.AddGrade(70);
