@@ -1,29 +1,19 @@
 ﻿namespace ChallengeApp2022
 {
     // Klasa
-    public class Employee : IEmployee
+    public class EmployeeInMemory : EmployeeBase
     {
         //Lista
         private List<float> grades = new List<float>();
 
-        //Konstruktor
-        public Employee(string name, string surname, char gender, int age)
-            
+        // Konstruktor
+        public EmployeeInMemory(string name, string surname, char gender, int age)
+            : base(name, surname, gender, age)
         {
-            this.Name = name;
-            this.Surname = surname;
-            this.Gender = gender;
-            this.Age = age;
         }
 
-        //Właściwości
-        public string Name { get; private set; }
-        public string Surname { get; private set; }
-        public char Gender { get; private set; }
-        public int Age { get; private set; }
-
         //Metody
-        public void AddGrade(float grade)
+        public override void AddGrade(float grade)
         {
             if (grade >= 0 && grade <= 100)
             {
@@ -34,7 +24,8 @@
                 throw new Exception("\nCAUTION!!! Invalid grade value!!!\n");
             }
         }
-        public void AddGrade(string grade)
+
+        public override void AddGrade(string grade)
         {
             if (float.TryParse(grade, out float result))
             {
@@ -47,7 +38,7 @@
             }
         }
 
-        public void AddGrade(char grade)
+        public override void AddGrade(char grade)
         {
             switch (grade)
             {
@@ -76,28 +67,31 @@
             }
         }
 
-        public void AddGrade(short grade)
+        public override void AddGrade(short grade)
         {
             float gradeAsFloat = (float)grade;
             this.AddGrade(gradeAsFloat);
         }
-        public void AddGrade(int grade)
+
+        public override void AddGrade(int grade)
         {
             float gradeAsFloat = (float)grade;
             this.AddGrade(gradeAsFloat);
         }
-        public void AddGrade(long grade)
+
+        public override void AddGrade(long grade)
         {
             float gradeAsFloat = (float)grade;
             this.AddGrade(gradeAsFloat);
         }
-        public void AddGrade(double grade)
+
+        public override void AddGrade(double grade)
         {
             float gradeAsFloat = (float)grade;
             this.AddGrade(gradeAsFloat);
         }
-        // Statystyki
-        public Statistics GetStatisticsWithForeach()
+
+        public override Statistics GetStatisticsWithForeach()
         {
             var statistics = new Statistics();
             statistics.Average = 0;
@@ -134,6 +128,5 @@
             }
             return statistics;
         }
-
     }
 }
