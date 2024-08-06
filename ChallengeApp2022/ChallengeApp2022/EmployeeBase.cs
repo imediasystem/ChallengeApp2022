@@ -2,6 +2,12 @@
 {
     public abstract class EmployeeBase : IEmployee
     {
+        //Delegat
+        public delegate void GradeAddedDelegate(object sender, EventArgs args);
+
+        //Event
+        public abstract event GradeAddedDelegate GradeAdded;
+
         // Konstruktor
         public EmployeeBase(string name, string surname, char gender, int age)
         {
@@ -10,6 +16,7 @@
             this.Gender = gender;
             this.Age = age;
         }
+
         //Właściwości
         public string Name { get; private set; }
         public string Surname { get; private set; }

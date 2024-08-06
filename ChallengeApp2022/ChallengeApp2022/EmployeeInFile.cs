@@ -3,6 +3,9 @@
     //Klasa
     public class EmployeeInFile : EmployeeBase
     {
+        //Event
+        public override event GradeAddedDelegate GradeAdded;
+
         //Plik
         private const string fileName = "grades.txt";
 
@@ -10,6 +13,7 @@
         public EmployeeInFile(string name, string surname, char gender, int age)
             : base(name, surname, gender, age)
         {
+
         }
 
         //Metody
