@@ -7,6 +7,7 @@ Console.ResetColor();
 Console.WriteLine();
 
 var employeeInFile1 = new EmployeeInFile("Karol", "Kubiak", 'M', 34);
+employeeInFile1.GradeAdded += EmployeeGradeAdded;
 
 void EmployeeGradeAdded(object sender, EventArgs args)
 {

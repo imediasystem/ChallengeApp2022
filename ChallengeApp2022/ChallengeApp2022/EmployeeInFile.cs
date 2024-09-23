@@ -1,6 +1,4 @@
-﻿using static System.Formats.Asn1.AsnWriter;
-
-namespace ChallengeApp2022
+﻿namespace ChallengeApp2022
 {
     //Klasa
     public class EmployeeInFile : EmployeeBase
@@ -123,6 +121,8 @@ namespace ChallengeApp2022
                     var line = reader.ReadLine();
                     while (line != null)
                     {
+                        var number = float.Parse(line);
+                        grades.Add(number);
                         line = reader.ReadLine();
                     }
                 }
