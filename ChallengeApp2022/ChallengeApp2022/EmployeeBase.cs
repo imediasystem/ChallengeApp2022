@@ -8,7 +8,7 @@
         //Event
         public abstract event GradeAddedDelegate GradeAdded;
 
-        // Konstruktor
+        //Konstruktor
         public EmployeeBase(string name, string surname, char gender, int age)
         {
             this.Name = name;

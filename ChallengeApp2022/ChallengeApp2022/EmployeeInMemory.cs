@@ -9,7 +9,7 @@
         //Lista
         private List<float> grades = new List<float>();
 
-        // Konstruktor
+        //Konstruktor
         public EmployeeInMemory(string name, string surname, char gender, int age)
             : base(name, surname, gender, age)
         {
@@ -103,38 +103,12 @@
         public override Statistics GetStatisticsWithForeach()
         {
             var statistics = new Statistics();
-            statistics.Average = 0;
-            statistics.Max = float.MinValue;
-            statistics.Min = float.MaxValue;
-            statistics.NumberOfRatings = 0;
 
             foreach (var grade in this.grades)
             {
-                statistics.Max = Math.Max(statistics.Max, grade);
-                statistics.Min = Math.Min(statistics.Min, grade);
-                statistics.Average += grade;
-                statistics.NumberOfRatings = this.grades.Count;
+                statistics.AddGrade(grade);
             }
-            statistics.Average /= this.grades.Count;
 
-            switch (statistics.Average)
-            {
-                case var average when average >= 80:
-                    statistics.AverageLetter = 'A';
-                    break;
-                case var average when average >= 60:
-                    statistics.AverageLetter = 'B';
-                    break;
-                case var average when average >= 40:
-                    statistics.AverageLetter = 'C';
-                    break;
-                case var average when average >= 20:
-                    statistics.AverageLetter = 'D';
-                    break;
-                default:
-                    statistics.AverageLetter = 'E';
-                    break;
-            }
             return statistics;
         }
     }
