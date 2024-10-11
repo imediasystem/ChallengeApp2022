@@ -1,1 +1,1 @@
-Testowa aplikacja konsolowa do oceny pracowników w firmie
+Test console application for employee evaluation in the company.
