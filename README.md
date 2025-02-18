@@ -1,6 +1,6 @@
 ## 🔥 Project Name - CHALLENGEAPP2022
 
-Test console application for employee evaluation in the company.
+Developing an employee evaluation application, showcasing my ability to create software solutions that improve business operations. This project involves complex problem-solving and software development skills.
 
 &nbsp;
 
