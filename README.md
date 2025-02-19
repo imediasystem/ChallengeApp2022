@@ -1,4 +1,4 @@
-## 🔥 Project Name - ChallengeApp2022
+## 🔥 Project Name - CHALLENGEAPP2022
 
 Developing an employee evaluation application, showcasing my ability to create software solutions that improve business operations. This project involves complex problem-solving and software development skills.
 
