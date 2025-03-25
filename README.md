@@ -1,3 +1,6 @@
+![2440x1440-programming-background-2440-x-1440-qucb7t04z3jcmgwi](https://github.com/user-attachments/assets/60f34ce5-e09a-42a6-bc12-92daea02a60c)
+
+
 ## 🔥 Project Name - CHALLENGEAPP2022
 
 Developing an employee evaluation application, showcasing my ability to create software solutions that improve business operations. This project involves complex problem-solving and software development skills.
